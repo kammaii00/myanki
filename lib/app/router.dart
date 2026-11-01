@@ -7,6 +7,8 @@ import 'package:go_router/go_router.dart';
 
 import '../features/auth/auth_repository.dart';
 import '../features/auth/login_screen.dart';
+import '../features/cards/card_edit_screen.dart';
+import '../features/cards/card_list_screen.dart';
 import '../features/home/home_screen.dart';
 
 // 로그인 여부에 따라 로그인 화면과 홈 화면 사이를 자동으로 오가는 라우터
@@ -28,6 +30,23 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: [
       GoRoute(path: '/', builder: (_, _) => const HomeScreen()),
       GoRoute(path: '/login', builder: (_, _) => const LoginScreen()),
+      GoRoute(
+        path: '/decks/:deckId',
+        builder: (_, state) =>
+            CardListScreen(deckId: state.pathParameters['deckId']),
+      ),
+      GoRoute(path: '/cards', builder: (_, _) => const CardListScreen()),
+      // '/cards/new'는 '/cards/:cardId'보다 먼저 있어야 'new'가 카드 ID로 해석되지 않는다
+      GoRoute(
+        path: '/cards/new',
+        builder: (_, state) =>
+            CardEditScreen(initialDeckId: state.uri.queryParameters['deckId']),
+      ),
+      GoRoute(
+        path: '/cards/:cardId',
+        builder: (_, state) =>
+            CardEditScreen(cardId: state.pathParameters['cardId']),
+      ),
     ],
   );
 });
