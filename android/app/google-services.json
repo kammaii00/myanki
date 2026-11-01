@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "738180259884",
+    "project_id": "myanki-d5a19",
+    "storage_bucket": "myanki-d5a19.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738180259884:android:b6396fbf8cfda8ca6fb189",
+        "android_client_info": {
+          "package_name": "com.jwpark.myanki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738180259884-ujksvt1pq4sl609mhdost6usue6vagvi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jwpark.myanki",
+            "certificate_hash": "b99af1e27ebfa18bb7a3bf23bc80d3e5941e70c0"
+          }
+        },
+        {
+          "client_id": "738180259884-fh7e2aacinadi92khgnob06ppo8bd3h6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTSFJdtKqrNH8SdFenywflafeY_oR7ag4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738180259884-fh7e2aacinadi92khgnob06ppo8bd3h6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
